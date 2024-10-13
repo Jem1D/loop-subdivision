@@ -33,11 +33,11 @@ for face in mesh.facets:
 
 # to save the halfedge mesh you will need to following function.
 def save_halfmesh_as_obj(mesh, file_name):
-    if not os.path.exists("outputs"):
-        os.makedirs("outputs")
+    if not os.path.exists("output"):
+        os.makedirs("output")
 
     # Construct full file path with folder and file name
-    file_path = os.path.join("outputs", file_name)
+    file_path = os.path.join("output", file_name)
     with open(file_path, 'w') as open_file:
         for vertex in mesh.vertices:
             lv = vertex.get_vertex()
